@@ -57,6 +57,10 @@ df_all['Year'] = pd.to_numeric(df_all['Year'], errors='coerce')
 df_all = df_all.dropna(subset=['Year'])
 df_all['Year'] = df_all['Year'].astype(np.int16)
 
+df_all['Debt_Value'] = pd.to_numeric(df_all['Debt_Value'], errors='coerce')
+df_all = df_all.dropna(subset=['Debt_Value'])
+df_all['Debt_Value'] = df_all['Debt_Value'].astype(np.float64)
+
 remove_list = ["Low income", "Lower middle income", "Low & middle income",
                "Middle income", "Upper middle income", "IDA total", "IDA only"]
 
